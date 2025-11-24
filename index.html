@@ -3,61 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Postres</title>
+    <title>Sweet Luxury Blog</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
+    <header class="navbar">
+        <div class="logo">Sweet Luxury</div>
+        <nav>
+            <ul>
+                <li><a href="#pasteles">Pasteles</a></li>
+                <li><a href="#galletas">Galletas</a></li>
+                <li><a href="#postres-frios">Postres Fríos</a></li>
+                <li><a href="#chocolate">Chocolate</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="container">
 
         <aside class="sidebar">
             <h2>Categorías</h2>
             <ul>
-                <li><a href="#">Pasteles</a></li>
-                <li><a href="#">Galletas</a></li>
-                <li><a href="#">Pays</a></li>
-                <li><a href="#">Cupcakes</a></li>
-                <li><a href="#">Recetas rápidas</a></li>
+                <li><a href="#pasteles">Pasteles</a></li>
+                <li><a href="#galletas">Galletas</a></li>
+                <li><a href="#postres-frios">Postres Fríos</a></li>
+                <li><a href="#chocolate">Chocolate</a></li>
             </ul>
         </aside>
 
         <main class="content">
 
-            <h1 class="titulo">Blog de Postres</h1>
+            <section id="pasteles">
+                <h2 class="category-title">Pasteles</h2>
 
-            <div class="cards">
+                <div class="card-grid">
 
-                <div class="card">
-                    <img src="assets/images/cheescake.jpg"
-                         alt="Cheesecake">
-                    <h3>Cheesecake Clásico</h3>
-                    <p>Una receta suave, cremosa y perfecta para cualquier ocasión...</p>
-                    <a href="entrada.html" class="btn">Leer más</a>
+                    <div class="card">
+                        <img src="assets/images/red velvet.jpg" alt="">
+                        <h3>Pastel Red Velvet</h3>
+                        <p>Un clásico elegante de textura suave y sabor irresistible.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/pastel fresas.jpg" alt="">
+                        <h3>Pastel de Fresas</h3>
+                        <p>Fresco, dulce y perfecto para celebraciones especiales.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/pastel chocolate oscuro.jpg" alt="">
+                        <h3>Pastel de Chocolate Oscuro</h3>
+                        <p>Un postre profundo y elegante para paladares exigentes.</p>
+                    </div>
+
                 </div>
+            </section>
 
-                <div class="card">
-                    <img src="assets/images/brownie.jpg"
-                         alt="Brownies">
-                    <h3>Brownies Fudge</h3>
-                    <p>Unos brownies húmedos con un intenso sabor a chocolate...</p>
-                    <a href="entrada.html" class="btn">Leer más</a>
+            <section id="galletas">
+                <h2 class="category-title">Galletas</h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="assets/images/galletas chocolate.jpg" alt="">
+                        <h3>Chocolate Chips Deluxe</h3>
+                        <p>Crunchy por fuera, suaves por dentro.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/galletas mantequilla.jpg" alt="">
+                        <h3>Galletas de Mantequilla</h3>
+                        <p>Clásicas, finas y perfectas para acompañar té.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/galletas almendras.jpg" alt="">
+                        <h3>Galletas con Almendra</h3>
+                        <p>Elegancia en un pequeño bocado.</p>
+                    </div>
                 </div>
+            </section>
 
-                <div class="card">
-                    <img src="assets/images/cupcakes.jpg"
-                         alt="Cupcakes">
-                    <h3>Cupcakes Vainilla</h3>
-                    <p>Suaves, esponjosos y decorados con buttercream casero...</p>
-                    <a href="entrada.html" class="btn">Leer más</a>
+            <section id="postres-frios">
+                <h2 class="category-title">Postres Fríos</h2>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="assets/images/tiramisu.webp" alt="">
+                        <h3>Tiramisú Clásico</h3>
+                        <p>La mezcla perfecta de café, crema y elegancia italiana.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/mousse.jpg" alt="">
+                        <h3>Mousse de Chocolate</h3>
+                        <p>Suave, delicado y con sabor intenso.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/cheescake.jpg" alt="">
+                        <h3>Cheesecake Frío</h3>
+                        <p>Un postre cremoso de textura perfecta.</p>
+                    </div>
                 </div>
+            </section>
 
-            </div>
+            <section id="chocolate">
+                <h2 class="category-title">Chocolate</h2>
+
+                <div class="card-grid">
+
+                    <div class="card">
+                        <img src="assets/images/trufas.jpg" alt="">
+                        <h3>Trufas de Cacao</h3>
+                        <p>Intensas y artesanales, un gusto refinado.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/brownie.jpg" alt="">
+                        <h3>Brownies Premium</h3>
+                        <p>Húmedos, densos y de sabor profundo.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/images/fondant.jpg" alt="">
+                        <h3>Fondant de Chocolate</h3>
+                        <p>Elegancia francesa en cada porción.</p>
+                    </div>
+
+                </div>
+            </section>
 
         </main>
-
     </div>
 
 </body>

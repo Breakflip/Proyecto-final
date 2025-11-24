@@ -1,142 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap');
+
+/* --- BASE --- */
 body {
-    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background-color: #f5f5f5;
-    color: #2b2b2b;
+    padding: 0;
+    background: #121212;
+    color: #e8e8e8;
+    font-family: "Playfair Display", serif;
 }
 
-.container {
+/* --- NAVBAR --- */
+.navbar {
     display: flex;
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-.sidebar {
-    width: 260px;
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-right: 1px solid #e8e8e8;
-    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 15px 40px;
+    border-bottom: 1px solid #333;
     position: sticky;
     top: 0;
+    z-index: 1000;
+}
 
-    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.03);
+.logo {
+    font-family: "Great Vibes", cursive;
+    font-size: 2.4em;
+    color: #d6b48c;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #e6d5bf;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #b8926e;
+}
+
+/* --- LAYOUT --- */
+.container {
+    display: flex;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 240px;
+    background: #1a1a1a;
+    padding: 30px;
+    border-right: 1px solid #333;
+    height: 100%;
+    position: sticky;
+    top: 80px;
 }
 
 .sidebar h2 {
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: #111;
-    margin-bottom: 25px;
-    font-weight: 700;
+    color: #d6b48c;
+    font-family: "Great Vibes", cursive;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.sidebar ul li {
-    margin: 18px 0;
-}
-
-.sidebar ul li a {
+.sidebar a {
     text-decoration: none;
-    color: #555;
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    color: #e6d5bf;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    transition: 0.3s;
 }
 
-.sidebar ul li a:hover {
-    color: #111;
+.sidebar a:hover {
+    color: #b8926e;
 }
 
+/* --- CONTENT --- */
 .content {
-    flex: 1;
-    padding: 50px 60px;
+    padding: 40px;
+    flex-grow: 1;
 }
 
-.titulo {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    color: #1a1a1a;
-    letter-spacing: -1px;
+.category-title {
+    font-size: 2.4em;
+    font-family: "Great Vibes", cursive;
+    color: #d6b48c;
+    margin-bottom: 20px;
 }
 
-.cards {
-    display: flex;
-    gap: 35px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+/* --- CARD GRID --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
 }
 
+/* --- CARD --- */
 .card {
-    background-color: #ffffff;
-    width: 320px;
-    border-radius: 18px;
+    background: #1a1a1a;
+    border-radius: 12px;
     overflow: hidden;
-    
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border: 1px solid #333;
+    padding-bottom: 15px;
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 10px 35px rgba(0,0,0,0.10);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 .card img {
     width: 100%;
-    height: 190px;
+    height: 180px;
     object-fit: cover;
-
     opacity: 0;
-    transform: scale(1.07);
-    animation: fadeIn 1s forwards ease-out;
+    animation: fadeIn 1s forwards;
 }
 
 @keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+    to { opacity: 1; }
 }
 
-
 .card h3 {
-    font-size: 22px;
-    font-weight: 600;
-    margin: 20px;
-    color: #1a1a1a;
+    color: #d6b48c;
+    margin: 15px;
 }
 
 .card p {
-    font-size: 15px;
-    color: #6f6f6f;
-    line-height: 1.6;
-    margin: 0 20px 25px;
-}
-
-.btn {
-    display: inline-block;
-    margin: 0 20px 25px;
-    padding: 12px 24px;
-
-    background-color: #111;
-    color: #ffffff;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn:hover {
-    background-color: #333;
-    transform: translateY(-2px);
+    margin: 0 15px;
+    color: #cfcfcf;
+    font-size: 0.9em;
 }
